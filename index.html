@@ -3,85 +3,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional profile of Abdi Ibrahim, lecturer at Jigjiga University, with interests in education, leadership and development.">
-  <title>Abdi Ibrahim | Professional Profile</title>
+  <meta name="description" content="Official academic and professional profile of Abdi Ibrahim, Lecturer at Jigjiga University.">
+  <meta name="theme-color" content="#102b46">
+  <title>Abdi Ibrahim | Academic & Professional Profile</title>
   <style>
-    :root { --navy:#12304a; --blue:#176b87; --pale:#eef5f8; --ink:#20313d; --muted:#5d6b75; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); line-height:1.65; background:#fff; }
-    header { background:linear-gradient(135deg,var(--navy),var(--blue)); color:white; padding:64px 20px 58px; }
-    .wrap { max-width:960px; margin:auto; }
-    header .eyebrow { text-transform:uppercase; letter-spacing:2px; font-size:.8rem; opacity:.85; }
-    h1 { font-size:clamp(2.2rem,6vw,3.8rem); line-height:1.1; margin:12px 0; }
-    header p { max-width:650px; font-size:1.15rem; margin:0; opacity:.95; }
-    nav { background:#f7fafb; border-bottom:1px solid #e3eaee; padding:12px 20px; }
-    nav .wrap { display:flex; flex-wrap:wrap; gap:20px; }
-    nav a { color:var(--navy); text-decoration:none; font-weight:700; font-size:.95rem; }
-    main { padding:26px 20px 60px; }
-    section { padding:28px 0; border-bottom:1px solid #e8eef1; }
-    h2 { color:var(--navy); font-size:1.55rem; margin:0 0 12px; }
-    .intro { background:var(--pale); border-radius:14px; padding:22px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
-    .item { border:1px solid #e2e9ed; border-radius:12px; padding:18px; background:#fff; }
-    .item h3 { margin:0 0 6px; color:var(--blue); font-size:1.05rem; }
-    a { color:var(--blue); }
-    .contact a { overflow-wrap:anywhere; }
-    footer { background:#f7fafb; color:var(--muted); padding:22px 20px; text-align:center; font-size:.9rem; }
-    @media (max-width:560px) { header { padding:48px 20px; } nav .wrap { gap:12px; } }
+    :root{
+      --navy:#102b46; --blue:#176b87; --teal:#28a0a5; --ink:#20313d;
+      --muted:#62717d; --pale:#eef5f8; --line:#e1e9ee; --white:#fff;
+      --shadow:0 14px 40px rgba(16,43,70,.09); --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7;background:#f8fbfc}
+    a{color:var(--blue)}
+    .wrap{width:min(1080px,calc(100% - 40px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:800;color:var(--navy);text-decoration:none;letter-spacing:.2px}
+    .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .navlinks a{font-size:.91rem;font-weight:700;text-decoration:none;color:#334b5b}
+    .navlinks a:hover{color:var(--teal)}
+    .hero{position:relative;overflow:hidden;color:white;background:linear-gradient(120deg,#102b46 0%,#155b78 65%,#16818b 100%);padding:82px 0 76px}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-130px;top:-210px;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 95px rgba(255,255,255,.025)}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:42px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:2.2px;font-size:.78rem;font-weight:700;color:#b9e5e8}
+    h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.08;margin:12px 0 16px;letter-spacing:-1.5px}
+    .hero p{font-size:1.16rem;max-width:690px;margin:0;color:#edf7fa}
+    .hero-note{margin-top:24px!important;font-size:.96rem!important;color:#d3e9ef!important}
+    .avatar{width:180px;height:180px;border-radius:50%;display:block;object-fit:cover;object-position:center 28%;border:3px solid rgba(255,255,255,.8);box-shadow:0 12px 35px rgba(0,0,0,.18)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.55);color:white}
+    .btn.primary{background:white;color:var(--navy);border-color:white}
+    .btn:hover{transform:translateY(-1px)}
+    main{padding:34px 0 70px}
+    section{padding:34px 0;border-bottom:1px solid var(--line)}
+    .section-head{margin-bottom:20px}
+    .kicker{color:var(--teal);font-size:.76rem;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
+    h2{color:var(--navy);font-size:1.8rem;line-height:1.25;margin:5px 0 8px}
+    .lead{color:var(--muted);max-width:760px;margin:0}
+    .about-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 5px 20px rgba(16,43,70,.035)}
+    .card h3{margin:0 0 7px;color:var(--blue);font-size:1.08rem}
+    .card p{margin:0;color:#465762}
+    .meta{display:block;color:var(--muted);font-size:.9rem;margin-top:5px}
+    .taglist{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+    .tag{background:var(--pale);color:#24556a;padding:7px 12px;border-radius:999px;font-size:.88rem;font-weight:700}
+    .timeline{border-left:2px solid #cfe2e9;margin:10px 0 0 8px;padding-left:22px}
+    .timeline-item{position:relative;padding:0 0 8px}
+    .timeline-item:before{content:"";position:absolute;left:-29px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--teal);border:3px solid #e4f2f3}
+    .contact-panel{background:linear-gradient(120deg,#102b46,#176b87);color:white;border-radius:var(--radius);padding:28px}
+    .contact-panel h2{color:white}
+    .contact-panel p{color:#e5f2f5}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .contact-links a{color:white;text-decoration:none;border:1px solid rgba(255,255,255,.45);padding:9px 14px;border-radius:999px;font-weight:700;overflow-wrap:anywhere}
+    footer{padding:25px 20px;text-align:center;color:var(--muted);font-size:.9rem}
+    @media(max-width:700px){
+      .nav{align-items:flex-start;flex-direction:column;padding:13px 0}
+      .navlinks{gap:10px 16px}
+      .navlinks a{font-size:.85rem}
+      .hero{padding:58px 0}
+      .hero-inner{grid-template-columns:1fr;gap:25px}
+      .avatar{width:116px;height:116px;grid-row:1}
+      .grid{grid-template-columns:1fr}
+      .wrap{width:min(100% - 32px,1080px)}
+      section{padding:28px 0}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div class="eyebrow">Professional profile</div>
-      <h1>Abdi Ibrahim</h1>
-      <p>Lecturer at Jigjiga University | Education, leadership and development</p>
+  <div class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">ABDI IBRAHIM</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#interests">Interests</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="hero-inner wrap">
+      <div>
+        <div class="eyebrow">Academic &amp; Professional Profile</div>
+        <h1>Abdi Ibrahim</h1>
+        <p>Lecturer at Jigjiga University</p>
+        <p class="hero-note">Education · Leadership · Public Administration · Development</p>
+        <div class="actions">
+          <a class="btn primary" href="#about">Explore my profile</a>
+          <a class="btn" href="mailto:Abdi.ibrahim@jju.edu.et">Contact me</a>
+        </div>
+      </div>
+      <img class="avatar" src="profile.jpg" alt="Portrait of Abdi Ibrahim">
     </div>
   </header>
-  <nav>
-    <div class="wrap">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#interests">Professional interests</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+
   <main class="wrap">
     <section id="about">
-      <div class="intro">
-        <h2>Welcome</h2>
-        <p>Welcome to my professional website. I am Abdi Ibrahim, a lecturer at Jigjiga University. My academic background is in public administration and development management, with postgraduate study in Educational Leadership and Management (EDLM).</p>
-        <p>This website is a place to share my professional background, education-related interests, and future academic and community-engagement work.</p>
+      <div class="section-head">
+        <div class="kicker">Introduction</div>
+        <h2>About me</h2>
+        <p class="lead">A brief overview of my academic background and professional interests.</p>
+      </div>
+      <div class="about-card">
+        <p>Welcome to my academic and professional website. I am Abdi Ibrahim, a lecturer at Jigjiga University. I hold an undergraduate degree in Public Administration and Development Management from Dire Dawa University and a Master's degree in Educational Leadership and Management (EDLM) from Haramaya University.</p>
+        <p>My professional interests include education systems, education management information systems (EMIS), educational leadership, instructional supervision, inclusive education, development management and community engagement.</p>
+        <p>This website provides an overview of my education, professional interests, research areas and academic work.</p>
       </div>
     </section>
+
     <section id="education">
-      <h2>Education</h2>
+      <div class="section-head">
+        <div class="kicker">Academic background</div>
+        <h2>Education</h2>
+      </div>
       <div class="grid">
-        <div class="item">
-          <h3>Master's degree</h3>
-          <p>Educational Leadership and Management (EDLM)<br>Haramaya University</p>
-        </div>
-        <div class="item">
-          <h3>Undergraduate degree</h3>
-          <p>Public Administration and Development Management<br>Dire Dawa University</p>
-        </div>
+        <article class="card">
+          <h3>Master's Degree</h3>
+          <p>Educational Leadership and Management (EDLM)</p>
+          <span class="meta">Haramaya University</span>
+        </article>
+        <article class="card">
+          <h3>Undergraduate Degree</h3>
+          <p>Public Administration and Development Management</p>
+          <span class="meta">Dire Dawa University</span>
+        </article>
       </div>
     </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <div class="kicker">Professional background</div>
+        <h2>Professional experience</h2>
+      </div>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Lecturer</h3>
+            <p>Jigjiga University</p>
+            <span class="meta">Teaching and academic work</span>
+          </div>
+        </div>
+        <p class="meta">Additional roles, responsibilities and dates can be added when confirmed.</p>
+      </div>
+    </section>
+
     <section id="interests">
-      <h2>Professional interests</h2>
+      <div class="section-head">
+        <div class="kicker">Areas of focus</div>
+        <h2>Professional interests</h2>
+      </div>
       <div class="grid">
-        <div class="item"><h3>Education systems</h3><p>Education management information systems (EMIS), education data quality and evidence-informed planning.</p></div>
-        <div class="item"><h3>Leadership and supervision</h3><p>Educational leadership, instructional supervision and school improvement.</p></div>
-        <div class="item"><h3>Inclusive education</h3><p>Teacher development and approaches that support the participation of all learners.</p></div>
-        <div class="item"><h3>Development and community</h3><p>Public administration, development management and community engagement.</p></div>
+        <article class="card"><h3>Education systems &amp; EMIS</h3><p>Education management information systems, education data quality and evidence-informed planning.</p></article>
+        <article class="card"><h3>Leadership &amp; supervision</h3><p>Educational leadership, instructional supervision and school improvement.</p></article>
+        <article class="card"><h3>Inclusive education</h3><p>Teacher development and approaches that support the participation of all learners.</p></article>
+        <article class="card"><h3>Development &amp; community</h3><p>Public administration, development management and community engagement.</p></article>
       </div>
     </section>
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:Abdi.ibrahim@jju.edu.et">Abdi.ibrahim@jju.edu.et</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/share/1BzXxGGBv4/" target="_blank" rel="noopener noreferrer">Abdi-Cirro Facebook Page</a></p>
+
+    <section id="research">
+      <div class="section-head">
+        <div class="kicker">Academic interests</div>
+        <h2>Research &amp; academic work</h2>
+        <p class="lead">Areas of academic interest that connect education, leadership and development.</p>
+      </div>
+      <div class="card">
+        <h3>Research interests</h3>
+        <div class="taglist">
+          <span class="tag">Instructional supervision</span>
+          <span class="tag">School improvement</span>
+          <span class="tag">Education data quality</span>
+          <span class="tag">Educational leadership</span>
+          <span class="tag">Inclusive education</span>
+          <span class="tag">Community engagement</span>
+        </div>
+        <p style="margin-top:16px">Research titles, publications, conference papers and project summaries can be added here as they become available.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-panel">
+        <div class="kicker">Get in touch</div>
+        <h2>Contact</h2>
+        <p>For academic, professional and education-related communication, please use the contact details below.</p>
+        <div class="contact-links">
+          <a href="mailto:Abdi.ibrahim@jju.edu.et">Email: Abdi.ibrahim@jju.edu.et</a>
+          <a href="https://www.facebook.com/share/1BzXxGGBv4/" target="_blank" rel="noopener noreferrer">Abdi-Cirro on Facebook</a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>© <span id="year">2026</span> Abdi Ibrahim. Professional profile.</footer>
+
+  <footer>© <span id="year">2026</span> Abdi Ibrahim · Academic &amp; Professional Profile</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
